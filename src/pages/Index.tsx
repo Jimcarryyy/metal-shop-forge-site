@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -73,9 +72,9 @@ const Index = () => {
       <Header />
       
       <main>
-        {/* Hero Section */}
-        <section className="relative bg-slate-800 text-white py-20 lg:py-32" aria-labelledby="hero-title">
-          <div className="absolute inset-0 bg-gradient-to-r from-slate-800 to-slate-700 opacity-90"></div>
+        {/* Hero Section - Updated with better contrast */}
+        <section className="relative text-white py-20 lg:py-32" aria-labelledby="hero-title">
+          {/* Background Image */}
           <div 
             className="absolute inset-0 bg-cover bg-center"
             style={{
@@ -83,24 +82,34 @@ const Index = () => {
             }}
           ></div>
           
+          {/* Dark Overlay for Better Text Contrast */}
+          <div className="absolute inset-0 bg-black bg-opacity-60"></div>
+          
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 id="hero-title" className="text-4xl md:text-6xl font-bold mb-6">
+            <h1 id="hero-title" className="text-4xl md:text-6xl font-bold mb-6 text-white drop-shadow-lg">
               Premium Metal Roofing
-              <span className="block text-3xl md:text-5xl text-slate-300 mt-2">
+              <span className="block text-3xl md:text-5xl text-slate-100 mt-2">
                 Built to Last
               </span>
             </h1>
             
-            <p className="text-xl md:text-2xl text-slate-200 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl text-slate-100 mb-8 max-w-3xl mx-auto drop-shadow-md">
               Professional metal roofing solutions, custom panel fabrication, and expert installation services. 
               Quality craftsmanship backed by decades of experience.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-white text-slate-800 hover:bg-slate-100 px-8 py-4 text-lg font-semibold">
+              <Button 
+                size="lg" 
+                className="bg-white text-slate-800 hover:bg-slate-100 focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-transparent px-8 py-4 text-lg font-semibold transition-all duration-200"
+              >
                 Get a Quote
               </Button>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-slate-800 px-8 py-4 text-lg font-semibold">
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="border-2 border-white text-white hover:bg-white hover:text-slate-800 focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-transparent px-8 py-4 text-lg font-semibold transition-all duration-200"
+              >
                 View Our Work
               </Button>
             </div>
@@ -121,24 +130,24 @@ const Index = () => {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-slate-700 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="text-center group">
+                <div className="w-16 h-16 bg-slate-700 hover:bg-slate-800 rounded-full flex items-center justify-center mx-auto mb-4 transition-colors duration-200">
                   <span className="text-white font-bold text-xl">20+</span>
                 </div>
                 <h3 className="text-xl font-semibold text-slate-800 mb-2">Years Experience</h3>
                 <p className="text-slate-600">Two decades of proven expertise in metal roofing solutions</p>
               </div>
               
-              <div className="text-center">
-                <div className="w-16 h-16 bg-slate-700 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="text-center group">
+                <div className="w-16 h-16 bg-slate-700 hover:bg-slate-800 rounded-full flex items-center justify-center mx-auto mb-4 transition-colors duration-200">
                   <span className="text-white font-bold text-xl">1K+</span>
                 </div>
                 <h3 className="text-xl font-semibold text-slate-800 mb-2">Projects Completed</h3>
                 <p className="text-slate-600">Successfully delivered over 1,000 roofing projects</p>
               </div>
               
-              <div className="text-center">
-                <div className="w-16 h-16 bg-slate-700 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="text-center group">
+                <div className="w-16 h-16 bg-slate-700 hover:bg-slate-800 rounded-full flex items-center justify-center mx-auto mb-4 transition-colors duration-200">
                   <span className="text-white font-bold text-xl">100%</span>
                 </div>
                 <h3 className="text-xl font-semibold text-slate-800 mb-2">Customer Satisfaction</h3>
@@ -159,28 +168,28 @@ const Index = () => {
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="text-center">
-                <div className="bg-white p-6 rounded-lg shadow-sm h-full">
+                <div className="bg-white p-6 rounded-lg shadow-sm h-full hover:shadow-md transition-shadow duration-200">
                   <h3 className="text-lg font-semibold text-slate-800 mb-3">Durability</h3>
                   <p className="text-slate-600">Premium materials engineered to withstand decades of weather conditions</p>
                 </div>
               </div>
               
               <div className="text-center">
-                <div className="bg-white p-6 rounded-lg shadow-sm h-full">
+                <div className="bg-white p-6 rounded-lg shadow-sm h-full hover:shadow-md transition-shadow duration-200">
                   <h3 className="text-lg font-semibold text-slate-800 mb-3">Affordable Pricing</h3>
                   <p className="text-slate-600">Competitive rates without compromising on quality or craftsmanship</p>
                 </div>
               </div>
               
               <div className="text-center">
-                <div className="bg-white p-6 rounded-lg shadow-sm h-full">
+                <div className="bg-white p-6 rounded-lg shadow-sm h-full hover:shadow-md transition-shadow duration-200">
                   <h3 className="text-lg font-semibold text-slate-800 mb-3">Expert Installation</h3>
                   <p className="text-slate-600">Certified installers with extensive training and field experience</p>
                 </div>
               </div>
               
               <div className="text-center">
-                <div className="bg-white p-6 rounded-lg shadow-sm h-full">
+                <div className="bg-white p-6 rounded-lg shadow-sm h-full hover:shadow-md transition-shadow duration-200">
                   <h3 className="text-lg font-semibold text-slate-800 mb-3">Comprehensive Warranty</h3>
                   <p className="text-slate-600">Industry-leading warranty coverage for materials and workmanship</p>
                 </div>
