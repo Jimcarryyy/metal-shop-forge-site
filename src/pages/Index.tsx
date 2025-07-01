@@ -108,7 +108,7 @@ const Index = () => {
               <Button 
                 size="lg" 
                 variant="outline" 
-                className="border-2 border-white text-white hover:bg-white hover:text-slate-800 focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-transparent px-8 py-4 text-lg font-semibold transition-all duration-200"
+                className="border-2 border-white text-black hover:bg-white hover:text-slate-800 focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-transparent px-8 py-4 text-lg font-semibold transition-all duration-200"
               >
                 View Our Work
               </Button>
